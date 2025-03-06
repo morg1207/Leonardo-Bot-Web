@@ -1,18 +1,23 @@
-# leo
+# LEONARDO-BOT-WEB
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## 1.1 Install vue
 
 ```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 22
+```
+## 1.2 Clone repository
+
+```sh
+cd ~
+git clone https://github.com/morg1207/Leonardo-Bot-Web.git
+```
+
+## 1.3 Project Setup
+
+```sh
+cd ~/Leonardo-Bot-Web
 npm install
 ```
 
@@ -28,19 +33,12 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-
-
-### 1.5 Install ROSBRIDGE package
+## 1.4 Install ROSBRIDGE package
 ```sh
 sudo apt install ros-humble-rosbridge-suite
 ```
 
-## 3. Launch server
+## 1.5 Launch server
 
 Terminal 1
 ```sh
