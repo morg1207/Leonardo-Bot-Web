@@ -1,0 +1,15 @@
+/* src/assets/tailwind.css */
+@import "tailwindcss";
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #343434; /* Color oscuro */
+    color: #343434; /* Color de texto */
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+}
