@@ -36,12 +36,14 @@ npm install
 ## 2.1 Compilar y ejecutar el servidor
 Terminal 1
 ```sh
+# Ejecutar el servidor web
 npm run dev
 ```
 ## 2.2 Ejecutar rosbridge 
 
-Terminal 1
+Terminal 2
 ```sh
+# Ejecuta el enlace del websocket
 source /opt/ros/${ROS_DISTRO}/setup.bash
 ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ```

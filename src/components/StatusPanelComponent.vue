@@ -49,11 +49,11 @@
 
     <!-- Datos de Posición con Floating Labels -->
     <div class="position-indicators p-4 bg-gray-700 rounded-xl shadow-lg">
-      <span class="label">Posición:</span>
+      <span class="label">Posición (m) :</span>
       <div class="flex gap-4 mt-4">
         <div class="relative w-32">
           <input type="text" id="pos_x" class="input-field" :value="position.x" readonly />
-          <label for="pos_x" class="floating-label">X</label>
+          <label for="pos_x" class="floating-label">X </label>
         </div>
         <div class="relative w-32">
           <input type="text" id="pos_y" class="input-field" :value="position.y" readonly />
@@ -64,15 +64,26 @@
           <label for="pos_z" class="floating-label">Z</label>
         </div>
       </div>
-    </div>
-
-    <!-- Orientación del Robot -->
-    <div class="orientation-indicator p-4 bg-gray-700 rounded-xl shadow-lg mt-6">
-      <span class="label">Orientación:</span>
-      <div class="flex gap-4 mt-4">
+      <span class="label mt-4 ">Orientación ( ° ) :</span>
+      <div class="flex gap-4 mt-4 ">
         <div class="relative w-32">
           <input type="text" id="orientation_x" class="input-field" :value="orientation.x" readonly />
           <label for="orientation_x" class="floating-label">Yaw</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orientación del Robot -->
+    <div class="orientation-indicator p-2 bg-gray-700 rounded-xl shadow-lg mt-6">
+      <span class="label">Velocidad:</span>
+      <div class="flex gap-4 mt-4">
+        <div class="relative w-32">
+          <input type="text" id="vel_x" class="input-field" :value="vel.x" readonly />
+          <label for="vel_x" class="floating-label">X (m/s)</label>
+        </div>
+        <div class="relative w-32">
+          <input type="text" id="vel_z" class="input-field" :value="vel.z" readonly />
+          <label for="vel_z" class="floating-label">Z (rad/s)</label>
         </div>
       </div>
     </div>
@@ -85,7 +96,7 @@ export default {
   data() {
     return {
       voltage: 12.6, // Voltaje de la batería
-      batteryLevel: 5, // Nivel de batería de 0 a 10
+      batteryLevel: 9, // Nivel de batería de 0 a 10
       position: {
         x: 3.4,
         y: 5.2,
@@ -93,6 +104,10 @@ export default {
       },
       orientation: {
         x: 0.0,
+      },
+      vel: {
+        x: 0.0,
+        z: 0.0,
       }
     };
   },

@@ -1,9 +1,12 @@
 <template>
   <div class="card mb-3 w-full p-6 bg-white rounded-lg shadow-md">
     <div class="card-body">
+      <!-- Estado de conexión -->
       <p class="status-text" :class="{ 'text-red-500': !connected, 'text-green-500': connected }">
         {{ connected ? 'Conectado!' : 'No conectado!' }}
       </p>
+
+      <!-- Campo de entrada para la IP -->
       <div class="form-group mt-4">
         <label for="rosbridge-address" class="form-label">IP robot</label>
         <input
@@ -11,31 +14,37 @@
           type="text"
           v-model="ip_robot"
           class="form-input"
-          placeholder="localhost"
+          placeholder="Ingrese la IP de su Leonard-Bot"
+          @input="validateIp"
         />
+        <!-- Mensaje de error si la IP no es válida -->
+        <p v-if="!isIpValid && ip_robot" class="text-red-500 text-sm mt-1">
+          Ingrese una IP válida (ejemplo: 192.168.1.18)
+        </p>
       </div>
+
+      <!-- Botones de conexión/desconexión -->
       <div class="mt-6">
         <button
-          :disabled="loading"
+          :disabled="loading || !isIpValid"
           class="btn btn-danger"
           @click="disconnect"
-          v-if="connected !== null && connected !==false"
+          v-if="connected"
         >
-         Disconnect
+          Disconnect
         </button>
-        <button 
-          :disabled="loading" 
-          class="btn btn-success" 
-          @click="connect" 
+        <button
+          :disabled="loading || !isIpValid"
+          class="btn btn-success"
+          @click="connect"
           v-else
         >
-        Connect
+          Connect
         </button>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import ROSLIB from "roslib";
 
@@ -46,15 +55,21 @@ export default {
     return {
       ros: null,
       connected: false,
-
+      isIpValid: false, // Estado de validación de la IP
       loading: false,
-      ip_robot: "localhost",
+      ip_robot: "",
       port: "9090",
       rosbridge_address: "",
     };
   },
 
   methods: {
+    // Valida la IP ingresada
+    validateIp() {
+      const ipPattern = /^(\d{1,3}\.){3}\d{1,3}$/; // Expresión regular para validar IP
+      this.isIpValid = ipPattern.test(this.ip_robot); // Actualiza el estado de validación
+    },
+
     connect() {
       this.loading = true;
       this.rosbridge_address = "ws://" + this.ip_robot + ":9090"
