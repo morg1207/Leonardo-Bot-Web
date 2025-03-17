@@ -2,13 +2,13 @@
   <div class="data-panel">
     
     <!-- Mapa (35% de la pantalla) -->
-    <div class="map-container w-full h-[40vh] flex flex-col items-center justify-center p-4 bg-gray-700 rounded-xl shadow-lg overflow-hidden mb-3">
+    <div class="map-container w-full h-[40vh] flex flex-col items-center justify-center p-4 rounded-xl shadow-lg overflow-hidden mb-3 " style="background-color: #009b6d;">
       <span class="label text-white">Map</span>
       <canvas id="mapCanvas" ref="mapCanvas" class="w-full h-full"></canvas>
     </div>
 
     <!-- Cámara (35% de la pantalla) -->
-    <div class="camera-container w-full h-[40vh] flex flex-col items-center justify-center p-4 bg-gray-700 rounded-xl shadow-lg overflow-hidden ">
+    <div class="camera-container w-full h-[40vh] flex flex-col items-center justify-center rounded-xl shadow-lg overflow-hidden " style="background-color: #009b6d;">
       <span class="label text-white">Cámara</span>
       <div class="w-full h-full bg-gray-600 rounded-xl relative">
         <div id="divCamera"></div>

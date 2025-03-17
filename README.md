@@ -37,7 +37,7 @@ npm install
 Terminal 1
 ```sh
 # Ejecutar el servidor web
-npm run dev
+npm run dev -- --host
 ```
 ## 2.2 Ejecutar rosbridge 
 

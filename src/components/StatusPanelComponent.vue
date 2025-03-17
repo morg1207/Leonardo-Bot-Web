@@ -1,10 +1,10 @@
 <template>
   <div class="status-panel">
     <!-- Título de la sección -->
-    <h2 class="title text-center text-2xl font-bold text-blue-400 mb-4">Perfil del Robot</h2>
+    <h2 class="title text-center text-2xl font-bold text-blue-400 mb-4 " style="color: #009b6d;">Perfil del Robot</h2>
 
     <!-- Indicador de Voltaje -->
-    <div class="voltage-indicator mb-6 p-4 bg-gray-700 rounded-xl shadow-lg">
+    <div class="voltage-indicator mb-6 p-4 rounded-xl shadow-lg" style="background-color: #009b6d;">
       <span class="label">ID Robot</span>
       <div class="flex items-center justify-center">
         <div class="w-full h-12 bg-gray-600 rounded-full relative">
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Indicador de Voltaje -->
-    <div class="voltage-indicator mb-6 p-4 bg-gray-700 rounded-xl shadow-lg">
+    <div class="voltage-indicator mb-6 p-4 rounded-xl shadow-lg " style="background-color: #009b6d;">
       <span class="label">Voltaje de la Batería</span>
       <div class="flex items-center justify-center">
         <div class="w-full h-12 bg-gray-600 rounded-full relative">
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Indicador de Cantidad de Batería -->
-    <div class="battery-indicator mb-6 p-4 bg-gray-700 rounded-xl shadow-lg">
+    <div class="battery-indicator mb-6 p-4 rounded-xl shadow-lg " style="background-color: #009b6d;">
       <span class="label">Cantidad de Batería</span>
       <div class="flex flex-wrap justify-center">
         <div class="w-full">
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Datos de Posición con Floating Labels -->
-    <div class="position-indicators p-4 bg-gray-700 rounded-xl shadow-lg">
+    <div class="position-indicators p-4 rounded-xl shadow-lg " style="background-color: #009b6d;">
       <span class="label">Posición (m) :</span>
       <div class="flex gap-4 mt-4">
         <div class="relative w-32">
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Orientación del Robot -->
-    <div class="orientation-indicator p-2 bg-gray-700 rounded-xl shadow-lg mt-6">
+    <div class="orientation-indicator p-2 rounded-xl shadow-lg mt-6 " style="background-color: #009b6d;">
       <span class="label">Velocidad:</span>
       <div class="flex gap-4 mt-4">
         <div class="relative w-32">

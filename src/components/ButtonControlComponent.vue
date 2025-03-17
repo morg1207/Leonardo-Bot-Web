@@ -1,10 +1,10 @@
 <template>
   <div class="control-panel">
     <!-- Section Title -->
-    <h2 class="title text-center text-2xl font-bold text-blue-400 mb-4">Robot Control</h2>
+    <h2 class="title text-center text-2xl font-bold mb-4" style="color: #009b6d;">Robot Control</h2>
 
     <!-- Directional Controls -->
-    <div v-if="controlEnabled" class="control-content mb-4 p-4 bg-gray-700 rounded-xl shadow-lg">
+    <div v-if="controlEnabled" class="control-content mb-4 p-4 rounded-xl shadow-lg" style="background-color: #009b6d;">
       <!-- Contenedor flexible para botones y sliders -->
       <div class="flex flex-col lg:flex-row items-center gap-4">
         <!-- Botones de dirección -->
@@ -93,7 +93,7 @@
     </div>
 
     <!-- Arm Height Control -->
-    <div v-if="controlEnabled" class="control-content p-4 bg-gray-700 rounded-xl shadow-lg mt-6">
+    <div v-if="controlEnabled" class="control-content p-4 rounded-xl shadow-lg mt-6" style="background-color: #009b6d;">
       <div class="container">
         <span class="label">Arm Height (cm): </span>
         <div class="flex gap-4 mt-4">
@@ -127,7 +127,7 @@
     </div>
 
     <!-- Toggle Manual Control Button -->
-    <div class="control-content bg-gray-700 rounded-lg shadow-lg mt-6">
+    <div class="control-content rounded-lg shadow-lg mt-6 " style="background-color: #009b6d;">
       <button 
         @click="toggleManualControl" 
         class="control-button toggle-button py-2 px-4"
@@ -349,7 +349,7 @@ export default {
   margin: 0 auto;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #222;
+  background-color: #182a22;
   color: white;
   border-radius: 10px;
 }
@@ -409,7 +409,7 @@ export default {
 }
 
 .control-button1 {
-  background: #2563eb;
+  background: #182a22;
   color: white;
   border: none;
   border-radius: 10px;
@@ -438,7 +438,7 @@ export default {
   width: 100%;
   text-align: center;
   background: transparent;
-  color: #fff;
+  color: #009b6d;
   border: 1px solid #3b82f6;
   border-radius: 8px;
   padding: 10px;
@@ -501,7 +501,7 @@ export default {
 }
 
 .speed-value:hover {
-  background-color: #3182ce; /* Cambia el color al pasar el mouse */
+  background-color: #009b6d; /* Cambia el color al pasar el mouse */
 }
 
 
@@ -509,7 +509,7 @@ export default {
   -webkit-appearance: none;
   appearance: none;
   height: 8px;
-  background: #4a5568;
+  background: #009b6d;
   outline: none;
   border-radius: 4px;
 }
@@ -519,7 +519,7 @@ export default {
   appearance: none;
   width: 16px;
   height: 16px;
-  background: #4299e1;
+  background: #009b6d;
   border-radius: 50%;
   cursor: pointer;
 }
